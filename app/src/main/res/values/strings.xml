@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Car Finder</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">Map</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="timerVal">00:00:00</string>
+
+    <string name="api_dev">AIzaSyAPz3oIAJZojg1qbWnyUiNuyrrlc0S9wpY</string>
+    <string name="api_demo">AIzaSyDmEgW-LQ_0yWUAKDNum-b6sFMgCy-Aw_0</string>
+    <string name="api_home">AIzaSyByc3Smzw3GT4EJqd-PEDMtOihJVCSKwPg</string>
+</resources>

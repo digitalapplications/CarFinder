@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.amoryosef613.carfinder.Time"
+    android:onClick="payButtonOnClick"
+    android:background="#ffe5e5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Current Time"
+        android:id="@+id/currentTime"
+        android:textStyle="bold"
+        android:textSize="42dp"
+        android:clickable="false"
+        android:gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"/>
+
+    <TextClock
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textClock"
+        android:textSize="60dp"
+        android:layout_below="@+id/currentTime"
+        android:layout_alignStart="@+id/currentTime"
+        android:gravity="center"
+        android:layout_alignEnd="@+id/textView6"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Time To Return"
+        android:id="@+id/textView5"
+        android:textStyle="bold"
+        android:textSize="42dp"
+        android:gravity="center_horizontal"
+        android:layout_below="@+id/textClock"
+        android:layout_alignStart="@+id/textClock"
+        android:layout_marginTop="39dp"/>
+
+    //THIS IS THE TIMER
+    //END OF TIMER
+
+
+    // THIS IS THE HOUR NUMBER PICKER
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="110dp"
+
+        android:layout_marginBottom="72dp"
+        android:id="@+id/linearLayout">
+
+        <NumberPicker
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:id="@+id/pickNumber1"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/textView"
+            android:scaleX="2.4"
+            android:scaleY="2.4"
+            android:clickable="true"
+            android:layout_marginLeft="18dp"/>
+
+    </LinearLayout>// END OF HOUR NUMBER PICKER
+
+    //THIS IS THE MINUTE NUMBER PICKER
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="340dp"
+        android:layout_marginLeft="250dp"
+
+        android:layout_marginBottom="72dp"
+        android:id="@+id/linearLayout2">
+
+        <NumberPicker
+            android:layout_width="52dp"
+            android:layout_height="52dp"
+            android:id="@+id/pickNumber2"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/textView"
+            android:scaleX="2.4"
+            android:scaleY="2.4"
+            android:clickable="true"
+            android:layout_marginLeft="18dp"/>
+
+    </LinearLayout>// END OF MINUTE NUMBER PICKER
+
+    //FOOTER HOUR AND MINUTE
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text=" Hour          Minute"
+        android:id="@+id/textView6"
+        android:textSize="30dp"
+        android:visibility="gone"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_marginBottom="101dp"/>
+    //END OF FOOTER HOUR AND MINUTE
+
+    //MAP BUTTON
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:id="@+id/mapButton"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/map_button1126x631"
+        android:layout_alignTop="@+id/textView6"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginRight="210dp"/>
+    //END OF MAP BUTTON
+
+    //PAY PARKING BUTTON
+    <ImageButton
+        android:layout_width="30dp"
+        android:layout_height="20dp"
+        android:id="@+id/meterStart"
+        android:layout_alignBottom="@+id/mapButton"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:background="@drawable/parking_meter_380x253"
+        android:layout_alignTop="@+id/mapButton"
+        android:layout_marginLeft="210dp"
+        android:clickable="false"/>
+
+    <TextView
+        android:id="@+id/timeLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textSize="52dp"
+        android:textColor="#000000"
+        android:text="@string/timerVal"
+        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignStart="@+id/linearLayout" />
+    //END OF PAY PARKING BUTTON
+
+</RelativeLayout>
